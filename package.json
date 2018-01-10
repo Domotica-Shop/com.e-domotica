@@ -1,0 +1,15 @@
+{
+  "name": "com.e-domotica",
+  "version": "1.0.0",
+  "description": "Adds support for e-Domotica Z-Wave devices.",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "homey-log": "^1.0.5",
+    "homey-zwavedriver": "git+https://github.com/athombv/node-homey-zwavedriver.git"
+  }
+}
