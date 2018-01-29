@@ -8,7 +8,7 @@
     "en": "Adds support for e-Domotica Z-Wave devices."
   },
   "category": "lights",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Athom B.V.",
@@ -38,7 +38,10 @@
       ],
       "zwave": {
         "manufacturerId": 96,
-        "productTypeId": 4,
+        "productTypeId": [
+          4,
+          260
+        ],
         "productId": 1,
         "learnmode": {
           "instruction": {
