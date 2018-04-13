@@ -1,12 +1,9 @@
-# e-Domotica
+e-Domotica
 
-Adds support for e-Domotica Z-Wave devices.
+Adds support for e-Domotica Z-Wave devices, created by Domotica-Shop.nl.
 
-Note: This App was created based on the [Homey Everspring App](https://apps.athom.com/app/com.everspring) created by Ralf van Dooren. The EM6550 is a rebranded version of the Everspring AN157, hence when you have both these Apps installed on your Homey the device might be paired as either an Everspring AN157 or an e-Domotica EM6550.
+Note: This App was created based on the Homey Everspring App created by Ralf van Dooren. Many products are rebranded versions of Everspring products, hence when you have both these Apps installed on your Homey the device might be paired as either an Everspring 
+or an e-Domotica device.
 
-### Changelog
-v1.0.2
-- Add product id for EM6550
-
-v1.0.0
-- Adds support for EM6550
+V1.0.2
+Initial version. Updates with more E-Domotica products to follow soon.
