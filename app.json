@@ -1,5 +1,5 @@
 {
-    "id": "com.edomotica",
+    "id": "com.e-domotica",
     "sdk": 1,
     "name": {
         "en": "e-Domotica"
@@ -8,7 +8,7 @@
         "en": "Adds support for e-Domotica Z-Wave devices."
     },
     "category": "lights",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Domotica-shop.nl",
@@ -19,6 +19,10 @@
             {
                 "name": "Domotica shop",
                 "email": "info@domotica-shop.nl"
+            },
+            {
+                "name": "Ralf van Dooren",
+                "email": "ralfvd@gmail.com"
             }
         ]
     },
