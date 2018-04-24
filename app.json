@@ -1,62 +1,640 @@
 {
-  "id": "com.e-domotica",
-  "sdk": 1,
-  "name": {
-    "en": "e-Domotica"
-  },
-  "description": {
-    "en": "Adds support for e-Domotica Z-Wave devices."
-  },
-  "category": "lights",
-  "version": "1.0.2",
-  "compatibility": ">=1.5.0",
-  "author": {
-    "name": "Athom B.V.",
-    "email": "apps@athom.com"
-  },
-  "contributors": {
-    "developers": [
-      {
-        "name": "Ralf van Dooren",
-        "email": "ralfvd@gmail.com"
-      }
-    ]
-  },
-  "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
-  },
-  "drivers": [
-    {
-      "id": "EM6550",
-      "name": {
-        "en": "Wall Plug (EM6550)"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff"
-      ],
-      "zwave": {
-        "manufacturerId": 96,
-        "productTypeId": [
-          4,
-          260
-        ],
-        "productId": 1,
-        "learnmode": {
-          "instruction": {
-            "en": "Make sure the device is turned off, then press the pairing button three times in 1.5 seconds.",
-            "nl": "Zorg dat het apparaat is uitgeschakeld, druk vervolgens drie keer binnen 1,5 seconden op de pair knop."
-          }
-        },
-        "associationGroups": [
-          1
+    "id": "com.e-domotica",
+    "sdk": 1,
+    "name": {
+        "en": "e-Domotica"
+    },
+    "description": {
+        "en": "Adds support for e-Domotica Z-Wave devices."
+    },
+    "category": "lights",
+    "version": "1.0.3",
+    "compatibility": ">=1.5.0",
+    "author": {
+        "name": "Domotica-shop.nl",
+        "email": "info@domotica-shop.nl"
+    },
+    "contributors": {
+        "developers": [
+            {
+                "name": "Domotica shop",
+                "email": "info@domotica-shop.nl"
+            },
+            {
+                "name": "Ralf van Dooren",
+                "email": "ralfvd@gmail.com"
+            }
         ]
-      },
-      "images": {
-        "large": "/drivers/EM6550/assets/images/large.jpg",
-        "small": "/drivers/EM6550/assets/images/small.jpg"
-      }
-    }
+    },
+    "images": {
+        "large": "/assets/images/large.png",
+        "small": "/assets/images/small.png"
+    },
+    "drivers": [
+        {
+            "id": "EM6550",
+            "name": {
+                "en": "EM6550 Wall Plug"
+            },
+            "class": "socket",
+            "capabilities": [
+                "onoff"
+            ],
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": [
+                        4,
+                        260
+                    ],
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6551/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Make sure the device is turned off, then press the pairing button three times in 1.5 seconds.",
+                        "nl": "Zorg dat het apparaat is uitgeschakeld, druk vervolgens drie keer binnen 1,5 seconden op de pair knop."
+                    }
+                },
+                "associationGroups": [
+                    1
+                ]
+            },
+            "images": {
+                "large": "/drivers/EM6550/assets/images/large.jpg",
+                "small": "/drivers/EM6550/assets/images/small.jpg"
+            }
+        },
+        {
+            "id": "EM6556",
+            "name": {
+                "en": "EM6556 Mini Switch In-Wall"
+            },
+            "class": "socket",
+            "capabilities": [
+                "onoff"
+            ],
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": [
+                    17
+                ],
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6551/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Make sure the device is turned off, then press the pairing button three times in 1.5 seconds.",
+                        "nl": "Zorg dat het apparaat is uitgeschakeld, druk vervolgens drie keer binnen 1,5 seconden op de pair knop."
+                    }
+                },
+                "associationGroups": [
+                    1
+                ]
+            },
+            "images": {
+                "large": "/drivers/EM6556/assets/images/large.jpg",
+                "small": "/drivers/EM6556/assets/images/small.jpg"
+            }
+        },
+        {
+            "id": "EM6551",
+            "name": {
+                "en": "EM6551 Wall Plug"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 3,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6551/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Press the link key to put the unit into inclusion mode.",
+                        "nl": "Klik de link knop om de unit in autoinclusion mode te zetten"
+                    }
+                },
+                "associationGroups": [1]
+            },
+            "class": "socket",
+            "capabilities": [
+                "dim",
+                "onoff"
+            ],
+            "images": {
+                "large": "/drivers/EM6551/assets/images/large.png",
+                "small": "/drivers/EM6551/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "poll_interval",
+                    "type": "number",
+                    "attr": {
+                        "min": 60,
+                        "max": 3600
+                    },
+                    "value": 300,
+                    "label": {
+                        "en": "Poll Interval",
+                        "nl": "Poll Interval"
+                    },
+                    "hint": {
+                        "en": "The amount of seconds between asking the device for a status update (60-3600 s).",
+                        "nl": "Aantal seconden tussen het opvragen van een status update aan het apparaat (60-3600 s)."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6582",
+            "name": {
+                "en": "EM6582 Bewegingsmelder"
+            },
+            "zwave": {
+                "manufacturerId": 278,
+                "productTypeId": 1,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6582/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Triple click the little button behind the battery cover",
+                        "nl": "Driemaal drukken op de knop achter de batterij klep"
+                    }
+                },
+                "associationGroups": [1, 2],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 1,
+                        "value": 99
+                    },
+                    {
+                        "id": "enable_disable_sensor_detection",
+                        "size": 1,
+                        "value": "1"
+                    },
+                    {
+                        "id": "sensitivity_level",
+                        "size": 1,
+                        "value": 6
+                    },
+                    {
+                        "id": "trigger_interval",
+                        "size": 2,
+                        "value": 180
+                    },
+                    {
+                        "id": "lux_level",
+                        "size": 1,
+                        "value": 10
+                    },
+                    {
+                        "id": "on_off_duration",
+                        "size": 2,
+                        "value": 15
+                    }
+                ]
+            },
+            "class": "sensor",
+            "capabilities": ["alarm_motion", "measure_battery"],
+            "images": {
+                "large": "/drivers/EM6582/assets/images/large.png",
+                "small": "/drivers/EM6582/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic set level",
+                        "nl": "Basis inschakel instelling"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Value to be sent with a BASIC SET command.",
+                        "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 99
+                    }
+                },
+                {
+                    "id": "enable_disable_sensor_detection",
+                    "type": "dropdown",
+                    "label": {
+                        "en": "Set motion detection function for groups",
+                        "nl": "Schakel bewegingsmelding in voor groepen"
+                    },
+                    "value": "1",
+                    "hint": {
+                        "en": "Groups to send motion detection to",
+                        "nl": "Bepaald voor welke groepen de bewegingsmelding verstuurd wordt"
+                    },
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Group 1 enabled / group 2 enabled (default)",
+                                "nl": "Groep 1 ingeschakeld / groep 2 ingeschakeld (standaard)"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "Group 1 enabled / group 2 disabled",
+                                "nl": "Groep 1 ingeschakeld / groep 2 uitgeschakeld"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "Group 1 disabled / group 2 disabled",
+                                "nl": "Groep 1 uitgeschakeld / groep 2 uitgeschakeld"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "sensitivity_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Sensitivity level",
+                        "nl": "Gevoeligheid"
+                    },
+                    "value": 6,
+                    "hint": {
+                        "en": "Sensitivity level of the sensor.",
+                        "nl": "Gevoeligheid van de sensor."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 10
+                    }
+                },
+                {
+                    "id": "re-trigger_interval",
+                    "type": "number",
+                    "label": {
+                        "en": "Re-trigger interval (s)",
+                        "nl": "Tijd voor opnieuw verzenden (s)"
+                    },
+                    "value": 180,
+                    "hint": {
+                        "en": "The configuration parameter that can be used to adjust the interval of being re-triggered after the detector has been triggered. No response will be made during this interval if a movement is presented. The time interval can be set between 5 secs to 3600 secs.",
+                        "nl": "Deze waarde kan gebruikt worden om de interval voor opnieuw verzenden van beweging. Geen melding zal gedaan worden tijdens deze periode als er beweging is. De tijd kan ingesteld worden tussen 5 en 3600 seconden."
+                    },
+                    "attr": {
+                        "min": 5,
+                        "max": 3600
+                    }
+                },
+                {
+                    "id": "lux_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Light level threshold (%)",
+                        "nl": "Drempelwaarde lichtsterkte (%)"
+                    },
+                    "value": 10,
+                    "hint": {
+                        "en": "A detecting percentage of lux level which determines when the motion sensor will be activated. If percentage of lux level of ambient illumination falls below this percentage, and a person moves across or within the protected area, the detector will emit that there is a motion detected to the controller and activate connected modules and lighting. Percentage can be set between 1% to 100%.",
+                        "nl": "Minimale percentage lux (lichtsterkte) welke bepaald wanneer the bewegingssensor wordt geactiveerd. Als het percentage van de omgevingslichtsterkte beneden dit percentage valt, en er beweegt een persoon binnen of door het beschermde gebied, zal de detector beweging melden aan de controller en verbonden modules en lampen inschakelen. Het percentage kan ingesteld worden tussen 1% en 100%."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 100
+                    }
+                },
+                {
+                    "id": "on_off_duration",
+                    "type": "number",
+                    "label": {
+                        "en": "On-off duration (s)",
+                        "nl": "Aan-uit duur (s)"
+                    },
+                    "value": 15,
+                    "hint": {
+                        "en": "On-off duration setting will be useful if the detector is connected to a module or lighting. The duration determines how long the module/lighting should stay ON. Default setting will turn off the module/light after 15 seconds, after it has been turned on. This parameter can be configured with the value of 5 through 3600, where 5 means 5 second delay and 3600 for 3600 seconds (1 hour) delay.",
+                        "nl": "Aan-uit duur instelling is handig als de bewegingsmelder verbonden is met een module of lamp. De tijdsduur bepaald hoe lang de module/lamp ingeschakeld moet blijven. Standaard instelling zal de module/lamp na 15 seconden uitschakelen, nadat het is ingeschakeld. Deze parameter kan geconfigureerd worden met een waarde tussen 5 en 3600 waar 5 staat voor 5 seconden en 3600 voor 3600 seconden (1 uur) vertraging."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 3600
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6570",
+            "name": {
+                "en": "EM6570 Door/window sensor",
+                "nl": "EM6570 Deur/raam sensor"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 2,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6570/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Triple click the tamperswitch behind on the back of the sensor",
+                        "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
+                    }
+                },
+                "associationGroups": [1],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 1,
+                        "value": 99
+                    },
+                    {
+                        "id": "off_delay",
+                        "size": 1,
+                        "value": "1"
+                    }
+                ]
+            },
+            "class": "sensor",
+            "capabilities": [ "alarm_contact", "measure_battery"],
+            "images": {
+                "large": "/drivers/EM6570/assets/images/large.png",
+                "small": "/drivers/EM6570/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic set level",
+                        "nl": "Basis inschakel instelling"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Value to be sent with a BASIC SET command.",
+                        "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 99
+                    }
+                },
+                {
+                    "id": "off_delay",
+                    "type": "number",
+                    "label": {
+                        "en": "off Delay (s)",
+                        "nl": "uit Vertraging (s)"
+                    },
+                    "value": 1,
+                    "hint": {
+                        "en": "The Configuration parameter that can be used to adjust the amount of delay before  the  OFF  command  is  transmitted  as  Configuration  Parameter  #2. This  parameter  can  be  configured  with  the  value  of  1  through  127,  where  1  means 1 second delay and 127 means 127 seconds of delay.",
+                        "nl": "Met deze instelling kan ingesteld worden hoe lang er gewacht moet worden met het versturen van het OFF commando. Deze instelling kan worden ingsteld met een waarde tussen de 1 en 127, waar 1 staat voor 1 seconde verstraging en 127 staat voor 127 seconden vertraging."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 127
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6581",
+            "name": {
+                "en": "EM6581 Motion sensor",
+                "nl": "EM6581 Bewegingsmelder"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 1,
+                "productId": 2,
+                "learnmode": {
+                    "image": "/drivers/EM6581/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Press the inclusion link (marked 5) 3 times behind the battery cover",
+                        "nl": "Druk 3-maal op de knop (nummer 5) achter de batterij klep"
+                    }
+                },
+                "associationGroups": [ 1 ]
+            },
+            "class": "sensor",
+            "capabilities": [
+                "alarm_motion"
+            ],
+            "images": {
+                "large": "/drivers/EM6581/assets/images/large.jpg",
+                "small": "/drivers/EM6581/assets/images/small.jpg"
+            },
+            "settings": [
+                {
+                    "id": "sensitivity_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Sensitivity level",
+                        "nl": "Gevoeligheidsniveau"
+                    },
+                    "value": 6,
+                    "hint": {
+                        "en": "1 Means lowest sensitivity and 10 means highest.",
+                        "nl": "1 Is laagste gevoeligheid, 10 hoogste."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 10
+                    }
+                },
+                {
+                    "id": "on_off_duration",
+                    "type": "number",
+                    "label": {
+                        "en": "On-off duration (s)",
+                        "nl": "Aan-uit duur (s)"
+                    },
+                    "value": 5,
+                    "hint": {
+                        "en": "How long before device sends Off after being triggered",
+                        "nl": "Vertraging voordat 'Uit' commando verstuurd wordt"
+                    },
+                    "attr": {
+                        "min": 5,
+                        "max": 127
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6592",
+            "name": {
+                "en": "EM6592 Water Alarm",
+                "nl": "EM6592 Watermelder"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 11,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6592/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Press link key [5] three times within 1.5 seconds",
+                        "nl": "Driemaal drukken op de link knop [5]"
+                    }
+                },
+                "associationGroups": [1],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 1,
+                        "value": 99
+                    }
+                ]
+            },
+            "class": "sensor",
+            "capabilities": [ "alarm_water", "measure_battery"],
+            "images": {
+                "large": "/drivers/EM6592/assets/images/large.png",
+                "small": "/drivers/EM6592/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic set level",
+                        "nl": "Basis inschakel instelling"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Value to be sent with a BASIC SET command.",
+                        "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                    },
+                    "attr": {
+                        "min": 1,
+                        "max": 99
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6552",
+            "name": {
+                "en": "EM6552 Wall Plug",
+                "nl": "EM6552 Plug-in Schakelaar met meetfunctie"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 4,
+                "productId": 2,
+                "learnmode": {
+                    "image": "/drivers/EM6552/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Make sure device is off, then press the link key three times within 1.5 seconds.",
+                        "nl": "Zorg dat device af staat, dan druk 3 keer op de link knop binnen 1.5 sec."
+                    }
+                },
+                "associationGroups": [ 1 ]
+            },
+            "class": "socket",
+            "capabilities": [
+                "onoff",
+                "measure_power"
+            ],
+            "images": {
+                "large": "/drivers/EM6552/assets/images/large.jpg",
+                "small": "/drivers/EM6552/assets/images/small.jpg"
+            },
+            "settings": [
+                {
+                    "id": "meter_report_interval",
+                    "type": "number",
+                    "attr": {
+                        "min": 0,
+                        "max": 255
+                    },
+                    "value": 3,
+                    "label": {
+                        "en": "Meter Report Interval (10s)",
+                        "nl": "Meter Report Interval (10s)"
+                    },
+                    "hint": {
+                        "en": "The amount of seconds (times 10: e.g. 3 = 30s) between a Meter Report being send to controller.",
+                        "nl": "De tijd in seconden (x 10: bv 3 = 30s) tussen de Meter rapportages die naar de controller worden verzonden."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6580",
+            "name": {
+                "en": "EM6580 Motion sensor",
+                "nl": "EM6580 Bewegingsmelder"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 257,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6580/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Click the tamper switch behind the battery cover",
+                        "nl": "Druk op de tamper knop achter de batterij klep"
+                    }
+                },
+                "associationGroups": [ 1 ]
+            },
+            "class": "sensor",
+            "capabilities": [
+                "alarm_motion",
+                "measure_battery"
+            ],
+            "images": {
+                "large": "/drivers/EM6580/assets/images/large.jpg",
+                "small": "/drivers/EM6580/assets/images/small.jpg"
+            },
+            "settings": [
+                {
+                    "id": "phase_on",
+                    "type": "number",
+                    "label": {
+                        "en": "Phase on level",
+                        "nl": "Phase on level"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Phase on level command",
+                        "nl": "Phase on level command"
+                    },
+                    "attr": {
+                        "min": 0,
+                        "max": 127
+                    }
+                }
+            ]
+        },
+        {
+            "id": "EM6590",
+            "name": {
+                "en": "EM6590 Smoke sensor",
+                "nl": "EM6590 Rook detector"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productTypeId": 13,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/EM6590/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Click the bindings switch ",
+                        "nl": "Druk op de bindings knop "
+                    }
+                },
+                "associationGroups": [ 1 ]
+            },
+            "class": "sensor",
+            "capabilities": [
+                "measure_battery","alarm_smoke"
+            ],
+            "images": {
+                "large": "/drivers/EM6590/assets/images/large.png",
+                "small": "/drivers/EM6590/assets/images/small.png"
+            },
+            "settings": []
+        }
   ]
 }
