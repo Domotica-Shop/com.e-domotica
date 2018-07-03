@@ -8,7 +8,7 @@
         "en": "Adds support for e-Domotica Z-Wave devices."
     },
     "category": "lights",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Domotica-shop.nl",
