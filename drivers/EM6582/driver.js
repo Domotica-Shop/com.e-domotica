@@ -55,27 +55,27 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		}
 	},
 	settings: {
-		"basic_set_level": {
+		1: {
 			"index": 1,
 			"size": 1
 		},
-		"enable_disable_sensor_detection": {
+		2: {
 			"index": 2,
 			"size": 1
 		},
-		"sensitivity_level": {
+		3: {
 			"index": 3,
 			"size": 1
 		},
-		"re-trigger_interval": {
+		4: {
 			"index": 4,
 			"size": 2
 		},
-		"lux_level": {
+		5: {
 			"index": 5,
 			"size": 1
 		},
-		"on_off_duration": {
+		6: {
 			"index": 6,
 			"size": 2
 		}

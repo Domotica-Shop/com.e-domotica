@@ -160,32 +160,32 @@
                 "associationGroups": [1, 2],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     },
                     {
-                        "id": "enable_disable_sensor_detection",
+                        "id": 2,
                         "size": 1,
                         "value": 1
                     },
                     {
-                        "id": "sensitivity_level",
+                        "id": 3,
                         "size": 1,
                         "value": 6
                     },
                     {
-                        "id": "trigger_interval",
+                        "id": 4,
                         "size": 2,
                         "value": 180
                     },
                     {
-                        "id": "lux_level",
+                        "id": 5,
                         "size": 1,
                         "value": 10
                     },
                     {
-                        "id": "on_off_duration",
+                        "id": 6,
                         "size": 2,
                         "value": 15
                     }
@@ -199,7 +199,7 @@
             },
             "settings": [
                 {
-                    "id": "basic_set_level",
+                    "id": 1,
                     "type": "number",
                     "label": {
                         "en": "Basic set level",
@@ -216,7 +216,7 @@
                     }
                 },
                 {
-                    "id": "enable_disable_sensor_detection",
+                    "id": 2,
                     "type": "dropdown",
                     "label": {
                         "en": "Set motion detection function for groups",
@@ -252,7 +252,7 @@
                     ]
                 },
                 {
-                    "id": "sensitivity_level",
+                    "id": 3,
                     "type": "number",
                     "label": {
                         "en": "Sensitivity level",
@@ -286,7 +286,7 @@
                     }
                 },
                 {
-                    "id": "lux_level",
+                    "id": 5,
                     "type": "number",
                     "label": {
                         "en": "Light level threshold (%)",
@@ -303,7 +303,7 @@
                     }
                 },
                 {
-                    "id": "on_off_duration",
+                    "id": 6,
                     "type": "number",
                     "label": {
                         "en": "On-off duration (s)",
@@ -341,12 +341,12 @@
                 "associationGroups": [1],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     },
                     {
-                        "id": "off_delay",
+                        "id": 7,
                         "size": 1,
                         "value": "1"
                     }
@@ -360,7 +360,7 @@
             },
             "settings": [
                 {
-                    "id": "basic_set_level",
+                    "id": 1,
                     "type": "number",
                     "label": {
                         "en": "Basic set level",
@@ -377,7 +377,7 @@
                     }
                 },
                 {
-                    "id": "off_delay",
+                    "id": 7,
                     "type": "number",
                     "label": {
                         "en": "off Delay (s)",
@@ -424,7 +424,7 @@
             },
             "settings": [
                 {
-                    "id": "sensitivity_level",
+                    "id": 3,
                     "type": "number",
                     "label": {
                         "en": "Sensitivity level",
@@ -441,7 +441,7 @@
                     }
                 },
                 {
-                    "id": "on_off_duration",
+                    "id": 6,
                     "type": "number",
                     "label": {
                         "en": "On-off duration (s)",
@@ -479,7 +479,7 @@
                 "associationGroups": [1],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     }
@@ -493,7 +493,7 @@
             },
             "settings": [
                 {
-                    "id": "basic_set_level",
+                    "id": 1,
                     "type": "number",
                     "label": {
                         "en": "Basic set level",
