@@ -142,7 +142,7 @@
             ]
         },
         {
-            "id": "EM6582",
+            "id": 6582,
             "name": {
                 "en": "EM6582 Bewegingsmelder"
             },
@@ -151,7 +151,7 @@
                 "productTypeId": 1,
                 "productId": 1,
                 "learnmode": {
-                    "image": "/drivers/EM6582/assets/learnmode.svg",
+                    "image": "/drivers/6582/assets/learnmode.svg",
                     "instruction": {
                         "en": "Triple click the little button behind the battery cover",
                         "nl": "Driemaal drukken op de knop achter de batterij klep"
@@ -194,8 +194,8 @@
             "class": "sensor",
             "capabilities": ["alarm_motion", "measure_battery"],
             "images": {
-                "large": "/drivers/EM6582/assets/images/large.png",
-                "small": "/drivers/EM6582/assets/images/small.png"
+                "large": "/drivers/6582/assets/images/large.png",
+                "small": "/drivers/6582/assets/images/small.png"
             },
             "settings": [
                 {
